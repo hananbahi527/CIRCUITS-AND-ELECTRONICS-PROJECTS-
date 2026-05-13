@@ -74,7 +74,7 @@ The physical build follows a compact layout to minimize parasitic capacitance an
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 1. **Connect Power:** Apply 12V DC to the designated power rails.
 2. **Inject Signal:** Connect an audio source (mobile phone/PC) to the input via C2.
 3. **Calibration:** While playing a 1kHz sine wave (or steady music), slowly turn **RV1** until the output at the speaker is loud and clear without "raspy" distortion.
