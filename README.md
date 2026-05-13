@@ -38,7 +38,7 @@ The circuit leverages the common-emitter configuration to achieve high voltage g
 | **C4** | Ceramic Cap | 100nF | Supply decoupling/noise filtering. |
 | **LS1** | Speaker | 8Ω | Output transducer. |
 
-![Audio Amplifier](./Audio Amplifier.jpeg)
+![Audio Amplifier](./Audio%20Amplifier.jpeg)
 
 ## ⚙️ Functional Description
 
