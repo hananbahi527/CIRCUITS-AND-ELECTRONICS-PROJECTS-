@@ -1,16 +1,19 @@
-### **1. Introduction**
 
-The objective of this project is to design and simulate a **single-stage audio amplifier** using the **2N2222 NPN transistor** in a **Common Emitter (CE)** configuration. This circuit is designed to take a low-power audio signal (such as from a mobile phone jack) and amplify it to a level sufficient to drive a small loudspeaker.
-
----
 # 2N2222 Common Emitter Audio Amplifier
 
-![Status](https://img.shields.io/badge/Status-Prototype-orange)
-![License](https://img.shields.io/badge/License-MIT-blue)
-
+## 📖 Table of Contents
+* [ Circuit Overview](#-circuit-overview)
+    * [Technical Specifications](#technical-specifications)
+* [Component List](#-component-list)
+* [⚙️ Functional Description](#️-functional-description)
+    * [1. Biasing & Stability](#1-biasing--stability)
+    * [2. Signal Coupling](#2-signal-coupling)
+    * [3. Gain Optimization](#3-gain-optimization)
+    * [4. Power Integrity](#4-power-integrity)
+* [ Getting Started](#-getting-started)
 An implementation of a single-stage **Common Emitter (CE) Audio Amplifier** using the 2N2222 NPN transistor. This project focuses on signal amplification from low-power sources (e.g., mobile devices) to drive an 8Ω speaker load.
 
-## 📌 Circuit Overview
+##  Circuit Overview
 The circuit leverages the common-emitter configuration to achieve high voltage gain. It includes a voltage-divider biasing network for stability and coupling capacitors to isolate DC stages.
 
 ### Technical Specifications
@@ -19,7 +22,7 @@ The circuit leverages the common-emitter configuration to achieve high voltage g
 - **Output Impedance:** 8Ω (Typical)
 - **Configuration:** Class A Amplifier
 
-## 🛠 Component List
+## Component List
 
 | Reference | Component | Value | Description |
 | :--- | :--- | :--- | :--- |
@@ -34,6 +37,7 @@ The circuit leverages the common-emitter configuration to achieve high voltage g
 | **C3** | Electrolytic Cap | 470µF | Output DC blocking/coupling. |
 | **C4** | Ceramic Cap | 100nF | Supply decoupling/noise filtering. |
 | **LS1** | Speaker | 8Ω | Output transducer. |
+
 
 ## ⚙️ Functional Description
 
@@ -51,11 +55,7 @@ $$A_v \approx \frac{R_C}{r_e}$$
 ### 4. Power Integrity
 **C4 (100nF)** is placed across the supply rails to filter out high-frequency switching noise and stabilize the DC input.
 
-## 🚀 Getting Started
-1. Clone the repository.
-2. Refer to the `/schematics` folder for the wiring diagram.
-3. Apply 12V to the power rails.
-4. Adjust **RV1** until the output audio is clear and undistorted.
+
 
 ---
 *Developed for educational electronics experimentation.*
