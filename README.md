@@ -10,6 +10,7 @@
     * [2. Signal Coupling](#2-signal-coupling)
     * [3. Gain Optimization](#3-gain-optimization)
     * [4. Power Integrity](#4-power-integrity)
+    * [5. Hardware ](#5-Hardware )
 * [ Getting Started](#-getting-started)
 An implementation of a single-stage **Common Emitter (CE) Audio Amplifier** using the 2N2222 NPN transistor. This project focuses on signal amplification from low-power sources (e.g., mobile devices) to drive an 8Ω speaker load.
 
@@ -56,7 +57,8 @@ $$A_v \approx \frac{R_C}{r_e}$$
 ### 4. Power Integrity
 **C4 (100nF)** is placed across the supply rails to filter out high-frequency switching noise and stabilize the DC input.
 
-
+## Hardware 
+![Audio Amplifier](./Audio%20Amplifierp.jpeg)
 
 ---
 *Developed for educational electronics experimentation.*
