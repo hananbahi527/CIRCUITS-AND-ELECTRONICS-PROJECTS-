@@ -10,7 +10,7 @@
     * [2. Signal Coupling](#2-signal-coupling)
     * [3. Gain Optimization](#3-gain-optimization)
     * [4. Power Integrity](#4-power-integrity)
-    * [5. Hardware ](#5-Hardware )
+    * [5. Hardware Implementation](#5-Hardware-Implementation )
 * [ Getting Started](#-getting-started)
 An implementation of a single-stage **Common Emitter (CE) Audio Amplifier** using the 2N2222 NPN transistor. This project focuses on signal amplification from low-power sources (e.g., mobile devices) to drive an 8Ω speaker load.
 
@@ -57,8 +57,28 @@ $$A_v \approx \frac{R_C}{r_e}$$
 ### 4. Power Integrity
 **C4 (100nF)** is placed across the supply rails to filter out high-frequency switching noise and stabilize the DC input.
 
-## Hardware 
-![Audio Amplifier](./Audio%20Amplifierp.jpeg)
+##  Hardware Implementation
+
+![Audio Amplifier](./Audio%20Amplifier%20p.jpeg)
+
+The physical build follows a compact layout to minimize parasitic capacitance and noise. Below is a breakdown of the key physical sections:
+
+* **Q1 (Transistor):** Centrally mounted 2N2222 NPN transistor. Ensure the flat face is oriented correctly according to the pinout (E-B-C).
+* **Input Stage (Left):** The **C2 (100µF)** capacitor is located near the input terminals to isolate the DC bias from the audio source immediately.
+* **Bias Control:** The **RV1 (10kΩ Potentiometer)** is positioned for easy access, allowing real-time adjustment of the collector voltage to find the optimal Q-point.
+* **Output Stage (Right):** The large **C3 (470µF)** and **C1 (1000µF)** capacitors dominate this area. C1 is placed parallel to the emitter resistor (R3) to shunt AC signals to ground.
+* **Power Rails:** The 12V supply line is filtered by the **C4 (100nF)** ceramic disc capacitor, placed as close to the collector resistor (R4) as possible to stabilize the supply.
+
+> [!NOTE]
+> For best performance, use short jumper wires to prevent the circuit from acting as an antenna and picking up 50/60Hz mains hum.
+
+---
+
+## 🚀 Getting Started
+1. **Connect Power:** Apply 12V DC to the designated power rails.
+2. **Inject Signal:** Connect an audio source (mobile phone/PC) to the input via C2.
+3. **Calibration:** While playing a 1kHz sine wave (or steady music), slowly turn **RV1** until the output at the speaker is loud and clear without "raspy" distortion.
+4. **Monitor Heat:** The 2N2222 should remain cool to the touch during operation at these current levels.
 
 ---
 *Developed for educational electronics experimentation.*
